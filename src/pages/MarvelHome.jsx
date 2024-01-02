@@ -2,24 +2,16 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import Container from "@mui/material/Container";
 import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { Button, CardActionArea, CardActions } from '@mui/material';
-import md5 from "md5";
-import Modal from '@mui/material/Modal';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { CardActionArea, CardActions } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { CharacterContext } from "../context/KarakterDetayContext";
-
-
+import datamarvel from "../helper/datamarvel";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -63,68 +55,112 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-
 const MarvelHome = () => {
-    const [searchTerm, setSearchTerm] = useState("");
-    const { characterData, setCharacterData } = useContext(CharacterContext);
-    const navigate = useNavigate();
-  
-    useEffect(() => {
-      if (searchTerm) {
-        axios.get(`https://superheroapi.com/api.php/6159655490804436/search/${searchTerm}`)
-          .then(response => {
-            console.log(response);
-            setCharacterData(response.data.results);
-          })
-          .catch(error => {
-            console.error("API hatası:", error);
-          });
-      }
-    }, [searchTerm]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const { characterData, setCharacterData } = useContext(CharacterContext);
+  const { selectedCharacter, setSelectedCharacter } =
+    useContext(CharacterContext);
+  const navigate = useNavigate();
 
-      const handleDetay=()=>{
-        navigate("/KarakterDetay")
+  useEffect(() => {
+    setCharacterData(datamarvel);
+  }, []);
 
-      }
-    return (
-      <div>
-        <Container maxWidth="xxl" sx={{ border: "2px solid red", marginTop: "5rem", display: "flex", justifyContent: "center" }}>
-          <div style={{ position: "relative" }}>
-            <SearchIcon style={{ position: "absolute", left: 0, top: 0, bottom: 0, margin: 'auto' }} />
-            <InputBase
-              inputProps={{ "aria-label": "search" }}
-              placeholder="Karakter Ara"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              style={{ paddingLeft: 30 }}
-            />
-          </div>
+  useEffect(() => {
+    if (searchTerm) {
+      axios
+        .get(
+          `https://superheroapi.com/api.php/6159655490804436/search/${searchTerm}`
+        )
+        .then((response) => {
+          console.log(response);
+          setCharacterData(response.data.results);
+        })
+        .catch((error) => {
+          console.error("API hatası:", error);
+        });
+    } else {
+      setCharacterData(datamarvel);
+    }
+  }, [searchTerm]);
+
+  const handleDetay = (character) => {
+    setSelectedCharacter(character);
+    navigate("/KarakterDetay");
+  };
+
+  return (
+    <div>
+      <Container
+        className="marvelhome"
+        maxWidth="xxl"
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <div
+          style={{
+            position: "relative",
+            marginTop: "7rem",
+            border: "3px solid ",
+            borderRadius: "10px",
+          }}
+        >
+          <SearchIcon
+            style={{
+              position: "absolute",
+              left: 0,
+              top: 0,
+              bottom: 0,
+              margin: "auto",
+            }}
+          />
+          <InputBase
+            className="search"
+            inputProps={{ "aria-label": "search" }}
+            placeholder="Karakter Ara"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            style={{ paddingLeft: 30 }}
+          />
+        </div>
+        <Container
+          align="center"
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          {characterData &&
+            characterData.map((character) => (
+              <Card sx={{ maxWidth: 345, m: 2 }} key={character.id}>
+                <CardActionArea>
+                  <CardMedia
+                    onClick={() => handleDetay(character)}
+                    component="img"
+                    height="140"
+                    image={character?.image.url}
+                    alt={character?.name}
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {character?.name}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {character?.description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions></CardActions>
+              </Card>
+            ))}
         </Container>
-{characterData && characterData.map((character) => (
-        <Card sx={{ maxWidth: 345, m: 2 }} key={character.id} >
-          <CardActionArea>
-            <CardMedia onClick={handleDetay}
-              component="img"
-              height="140"
-              image={character?.image.url}
-              alt={character.name}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {character.name} 
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {character.description} 
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-    
-          </CardActions>
-        </Card>
-
-        
-      ))}
+      </Container>
     </div>
   );
 };

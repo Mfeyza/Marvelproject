@@ -1,151 +1,203 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&family=Rubik+Lines&family=Rubik+Maps&family=Single+Day&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&family=Rubik+Lines&family=Rubik+Maps&family=Single+Day&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Rubik Maps', sans-serif !important;
-   
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik Maps", sans-serif !important;
 }
 
-.login{
-    background-image:url(./assets/UUjj.gif.crdownload) ;
-    background-position: center;
-  
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-    
-   
+.login {
+  background-image: url(./assets/939b03e04fe7feb30547f79f251909b1.gif);
+  background-position: center;
 
-} 
-.buton1login{
-    text-shadow:  3px 3px 5px white !important;
-    background-color: rgb(92, 24, 24) !important;
-    
-    
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.buton2login{
-    text-shadow:  3px 3px 5px white !important;
-    background-color: rgb(150, 56, 56) !important;
-    color: rgb(41, 35, 35)!important;
-    font-weight: 500 !important;
-    
+.buton1login {
+  text-shadow: 3px 3px 5px white !important;
+  background-color: rgb(92, 24, 24) !important;
 }
-.buton1login:hover{
-    background-color: rgb(36, 35, 35) !important;
-    text-shadow:  3px 3px 5px rgb(151, 11, 11) !important;
-    
-}.buton2login:hover{
-    background-color: rgb(36, 35, 35) !important;
-    text-shadow:  3px 3px 5px rgb(151, 11, 11) !important;
+.buton2login {
+  text-shadow: 3px 3px 5px white !important;
+  background-color: rgb(150, 56, 56) !important;
+  color: rgb(41, 35, 35) !important;
+  font-weight: 500 !important;
+}
+.buton1login:hover {
+  background-color: rgb(36, 35, 35) !important;
+  text-shadow: 3px 3px 5px rgb(151, 11, 11) !important;
+}
+.buton2login:hover {
+  background-color: rgb(36, 35, 35) !important;
+  text-shadow: 3px 3px 5px rgb(151, 11, 11) !important;
 }
 .inputcustom .MuiInputLabel-root {
-    color: black !important;
-    font-weight: 900 !important;
+  color: black !important;
+  font-weight: 900 !important;
 }
 .inputcustom .MuiInputBase-input::placeholder {
-    
-    color: black;
-    font-weight: 700 !important; 
-  }
-  .inputcustom .MuiInput-underline:after {
-    border-bottom: 3px solid #751212 !important; 
-  }
-  .inputcustom .MuiInput-underline{
-    border-bottom: 3px solid;
-  }
-  
-  .buton3, .buton4{
-    color: #942828 !important;
-  }
-  @keyframes hoba {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.3); } 
-  }
-  
-  .buton4 {
-    animation: hoba 2s linear infinite;
-  }
+  color: black;
+  font-weight: 700 !important;
+}
+.inputcustom .MuiInput-underline:after {
+  border-bottom: 3px solid #751212 !important;
+}
+.inputcustom .MuiInput-underline {
+  border-bottom: 3px solid;
+}
 
+.buton3,
+.buton4 {
+  color: #942828 !important;
+}
+@keyframes hoba {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
 
-  /* register */
+.buton4 {
+  animation: hoba 2s linear infinite;
+}
 
-.register{
-    background-image:url(./assets/groot-waving-hi-onohm5pybw98bsvl.webp) ;
-    background-position: center;
-    background-attachment:fixed;  
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+/* register */
 
+.register {
+  background-image: url(./assets/groot-waving-hi-onohm5pybw98bsvl.webp);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .inputcustom2 .MuiInputLabel-root {
-    color: rgb(100, 16, 16) !important;
-    font-weight: 900 !important;
+  color: rgb(100, 16, 16) !important;
+  font-weight: 900 !important;
 }
 .inputcustom2 .MuiInputBase-input::placeholder {
-    
-    color: black;
-    font-weight: 700 !important; 
-  }
-  .inputcustom2 .MuiInput-underline:after {
-    border-bottom: 3px solid #751212 !important; 
-  }
-  .inputcustom2 .MuiInput-underline{
-    border-bottom: 3px solid rgb(61, 58, 58) !important;
-  }
-
-
-
-
-  .butonregister1{
-    text-shadow:  3px 3px 5px white !important;
-    background-color: rgb(92, 24, 24) !important;
-    
-    
+  color: black;
+  font-weight: 700 !important;
 }
-.butonregister2{
-    text-shadow:  3px 3px 5px rgb(32, 31, 31) !important;
-    background-color:  rgb(36, 35, 35) !important;
-    color: rgb(161, 143, 143)!important;
-    font-weight: 500 !important;
-    
+.inputcustom2 .MuiInput-underline:after {
+  border-bottom: 3px solid #751212 !important;
 }
-.butonregister1:hover{
-    background-color: rgb(36, 35, 35) !important;
-    text-shadow:  3px 3px 5px rgb(151, 11, 11) !important;
-    
-}.butonregister2:hover{
-    background-color: rgb(92, 12, 12) !important;
-    text-shadow:  3px 3px 5px rgb(179, 149, 149) !important;
+.inputcustom2 .MuiInput-underline {
+  border-bottom: 3px solid rgb(61, 58, 58) !important;
+}
+
+.butonregister1 {
+  text-shadow: 3px 3px 5px white !important;
+  background-color: rgb(92, 24, 24) !important;
+}
+.butonregister2 {
+  text-shadow: 3px 3px 5px rgb(32, 31, 31) !important;
+  background-color: rgb(36, 35, 35) !important;
+  color: rgb(161, 143, 143) !important;
+  font-weight: 500 !important;
+}
+.butonregister1:hover {
+  background-color: rgb(36, 35, 35) !important;
+  text-shadow: 3px 3px 5px rgb(151, 11, 11) !important;
+}
+.butonregister2:hover {
+  background-color: rgb(92, 12, 12) !important;
+  text-shadow: 3px 3px 5px rgb(179, 149, 149) !important;
 }
 
 /* home */
 
-.home{
-    background-image:url(./assets/marvel-vs-dc.gif) ;
-    background-position: center;
-    background-attachment:fixed;  
-    background-repeat: no-repeat;
-    background-size: cover;
+.home {
+  background-image: url(./assets/marvel-vs-dc.gif);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.h1{
-    font-family: 'Rubik Maps', sans-serif !important;
-    animation: colorChange 2s infinite;
-    font-weight:600 !important;
-
+.h1 {
+  font-family: "Rubik Maps", sans-serif !important;
+  animation: colorChange 2s infinite;
+  font-weight: 600 !important;
 }
 @keyframes colorChange {
-    0%, 100% { color: rgb(8, 8, 105); }
-    50% { color: rgb(105, 9, 9); }
+  0%,
+  100% {
+    color: rgb(8, 8, 105);
   }
+  50% {
+    color: rgb(105, 9, 9);
+  }
+}
 
 /* navbar */
 
-.navbar1, .navbar2, .navbar3{
-    background-color: rgba(0, 0, 0, 0.575) !important;
-    font-weight: bold !important;
-
+.navbar1,
+.navbar2,
+.navbar3 {
+  background-color: rgba(0, 0, 0, 0.575) !important;
+  font-weight: bold !important;
 }
 
+/* marvelhome */
+
+.marvelhome {
+  background-image: url(./assets/marvel.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* searchinput */
+
+.search::placeholder {
+  color: #751212 !important;
+  font-size: larger !important;
+}
+.search {
+  background-color: rgba(145, 115, 115, 0.527);
+}
+
+/* karakterdetail */
+
+.detail {
+  display: flex;
+  flex-direction: row !important;
+}
+.span1 {
+  color: #b33131 !important;
+}
+.DC {
+  background-image: url(./assets/dc.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hakkımda {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+  height: 100vh;
+}
+
+@keyframes colorChange {
+  0%,
+  100% {
+    color: rgb(131, 23, 23);
+    opacity: 1;
+  }
+  50% {
+    color: rgb(52, 52, 167);
+    opacity: 0.5;
+  }
+}
+
+.hakkımdatitle {
+  animation: colorChange 2s infinite;
+}
