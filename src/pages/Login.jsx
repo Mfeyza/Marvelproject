@@ -85,7 +85,7 @@ const Login = () => {
           }}
         >
           <Button
-            onClick={forgotPassword}
+            onClick={()=>forgotPassword(info.email)}
             className="buton3"
             variant="text"
             sx={{

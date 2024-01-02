@@ -18,8 +18,9 @@ const Register = () => {
 
   const handleChange = (e) => {
     setInfo({ ...info, [e.target.name]: e.target.value });
-    console.log(info);
+ 
   };
+  console.log(info);
   const handleClick = (e) => {
     e.preventDefault();
     const { email, parola, ad, soyad } = info;
