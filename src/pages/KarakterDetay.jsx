@@ -9,15 +9,29 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
 
 const KarakterDetay = () => {
   const navigate = useNavigate();
   const { selectedCharacter } = useContext(CharacterContext);
   console.log(selectedCharacter);
-  if (!selectedCharacter || !selectedCharacter.image) {
-    return <div>Veri yükleniyor...</div>;
-  } //!' bak
+  useEffect(() => {
+    if (!selectedCharacter || !selectedCharacter.image) {
+      const timer = setTimeout(() => {
+        navigate(-1); 
+      }, 3000);
 
+      return () => clearTimeout(timer);
+    }
+  }, [selectedCharacter, navigate]);
+
+  if (!selectedCharacter || !selectedCharacter.image) {
+    return (
+      <div>
+        Bir hata oluştu, 3 saniye içinde bir önceki sayfaya yönlendirileceksiniz...
+      </div>
+    );
+  }
   return (
     <div>
       <Container
