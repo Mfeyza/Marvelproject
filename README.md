@@ -32,7 +32,7 @@ Routing: React Router
 <br>
 
 
-  <img src="./img/Ekran görüntüsü 2024-01-10 184111.png"  width="35%" height="500" />
+  <img src="./Animationmarvel.gif"  width="35%" height="500" />
 
 
 
