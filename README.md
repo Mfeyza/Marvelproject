@@ -1,3 +1,78 @@
+Superhero Character Information System
+
+
+<br>
+
+Overview
+<br>
+
+This project is a React-based web application that allows users to view, search, and interact with superhero characters from different universes. It utilizes Firebase for authentication and data storage, and Material-UI for the user interface. The application also features real-time updates and notifications using Toastify.
+
+<br>
+
+Features
+User Authentication: Sign up, log in, and log out functionality with Firebase authentication.
+Character Data: Display detailed information about superhero characters from DC and Marvel universes.
+Search Functionality: Users can search for characters using a search bar.
+Dynamic Content: Character data is dynamically loaded and displayed.
+Responsive Design: Utilizes Material-UI for a responsive and visually appealing design.
+**
+<br>
+Real-Time Notifications: Uses Toastify to display real-time notifications for user actions like authentication success or failure.
+
+<br>
+
+Technology Stack
+Frontend: React.js
+Backend: Firebase (for Authentication and Data Storage)
+UI Components: Material-UI
+Notifications: React Toastify
+Routing: React Router
+
+<br>
+
+
+  <img src="./img/Ekran görüntüsü 2024-01-10 184111.png"  width="35%" height="500" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
