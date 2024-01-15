@@ -32,7 +32,7 @@ Routing: React Router
 <br>
 
 
-  <img src="./Animationmarvel.gif"  width="35%" height="500" />
+  <img src="./Animationmarvel.gif"  width="91%" height="700" />
 
 
 
